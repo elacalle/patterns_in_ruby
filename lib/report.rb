@@ -4,7 +4,7 @@ class Report
   end
 
   def print_title
-    # Overrride this hook
+    # Override this hook
   end
 
   def print_body
