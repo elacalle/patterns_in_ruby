@@ -47,12 +47,6 @@ describe Report do
   end
 
   describe '#print_footer' do
-    context 'not have hook' do
-      it 'throws error' do
-        expect { report.print_footer }.to raise_error('Footer is empty')
-      end
-    end
-
     context 'have a hook' do
       before { allow(report).to receive(:print_footer).and_return 'footer' }
 
