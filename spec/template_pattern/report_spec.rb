@@ -1,5 +1,4 @@
-require 'report'
-require 'byebug'
+require_relative './../../lib/template_pattern/report'
 
 describe Report do
   let(:report) { Report.new }

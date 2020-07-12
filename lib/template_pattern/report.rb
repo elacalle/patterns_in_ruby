@@ -10,8 +10,6 @@ class Report
     print_footer
   end
 
-  private
-
   def print_header
     raise 'Header is empty'
   end
