@@ -1,18 +1,13 @@
-require './task.rb'
+require './composite_task.rb'
 require './add_liquids.rb'
 require './add_dry_ingredients.rb'
 require './mix.rb'
 
-class MakeBatter < Task
+class MakeBatter < CompositeTask
   def initialize
-    @sub_tasks = []
     super('Make Batter')
-    @sub_tasks.push(Mix.new)
-    @sub_tasks.push(AddLiquids.new)
-    @sub_tasks.push(AddLiquids.new)
-  end
-
-  def get_time_required
-    @sub_tasks.sum { |t| t.get_time_required }
+    add_subtask(Mix.new)
+    add_subtask(AddLiquids.new)
+    add_subtask(AddLiquids.new)
   end
 end
